@@ -1,6 +1,7 @@
 from .libs import *
 from .other import *
-__version__ = "0.0.3"
+from .fast import *
+__version__ = "0.0.5"
 def show(img):
     plt.imshow(img)
 def addrend(r1, r2, width, heigth):

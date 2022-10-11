@@ -2,6 +2,7 @@ LICENSE
 README.md
 pyproject.toml
 src/pyvdl/__init__.py
+src/pyvdl/fast.py
 src/pyvdl/libs.py
 src/pyvdl/other.py
 src/pyvdl.egg-info/PKG-INFO

@@ -1,7 +1,7 @@
 Metadata-Version: 2.1
 Name: pyvdl
-Version: 0.0.3
-Summary: vectors draw lib
+Version: 0.0.5
+Summary: vectors draw lib, update: add fast render & Refactor code
 Author-email: Kolya142 <trim.fears_0k@icloud.com>
 License: MIT License
         
@@ -37,6 +37,8 @@ License-File: LICENSE
 # vectors-draw-lib or pyvdl
 ## request
 matplotlib
+
+Pillow
 
 numpy
 
@@ -79,4 +81,16 @@ vl.save("test.png", r)  # save render-obj: r as "test.png"
 animate = p()
 animate.render()
 animate.video("animation.avi")  # filename.avi
+```
+Fast-mode:
+```python
+# create
+def rend(x, y):
+    i = x if x > 0 else -x
+    j = y if y > 0 else -y
+    return (i+j)//2
+r = vl.fastRender(f, 250, 250)() # syntax: vl.fastRender(func, width, heigth, x=0, y=0)()
+r = vl.toRgb(r)
+vl.show(r) # show render-obj: r, only works on pykernel
+vl.save("test.png", r)  # save render-obj: r as "test.png"
 ```

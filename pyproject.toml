@@ -1,13 +1,13 @@
 [build-system]
-requires = ["setuptools>=61.0"]
+requires = ["setuptools>=61.0", "opencv-python", "Pillow", "matplotlib"]
 build-backend = "setuptools.build_meta"
 [project]
 name = "pyvdl"
-version = "0.0.3"
+version = "0.0.5"
 authors = [
   { name="Kolya142", email="trim.fears_0k@icloud.com " },
 ]
-description = "vectors draw lib"
+description = "vectors draw lib, update: add fast render & Refactor code"
 readme = "README.md"
 license = { file="LICENSE" }
 requires-python = ">=3.7"
